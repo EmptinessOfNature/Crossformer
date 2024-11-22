@@ -38,7 +38,7 @@ parser.add_argument('--itr', type=int, default=1, help='experiments times')
 
 parser.add_argument('--save_pred', action='store_true', help='whether to save the predicted future MTS', default=False)
 
-parser.add_argument('--use_gpu', type=bool, default=True, help='use gpu')
+parser.add_argument('--use_gpu', type=bool, default=False, help='use gpu')
 parser.add_argument('--gpu', type=int, default=0, help='gpu')
 parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
 parser.add_argument('--devices', type=str, default='0,1,2,3',help='device ids of multile gpus')
@@ -61,6 +61,7 @@ data_parser = {
     'ECL':{'data':'ECL.csv', 'data_dim':321, 'split':[15*30*24, 3*30*24, 4*30*24]},
     'ILI':{'data':'national_illness.csv', 'data_dim':7, 'split':[0.7, 0.1, 0.2]},
     'Traffic':{'data':'traffic.csv', 'data_dim':862, 'split':[0.7, 0.1, 0.2]},
+    'AAPL':{'data':'AAPL.csv', 'data_dim':5, 'split':[12*30*24, 4*30*24, 4*30*24]},
 }
 if args.data in data_parser.keys():
     data_info = data_parser[args.data]

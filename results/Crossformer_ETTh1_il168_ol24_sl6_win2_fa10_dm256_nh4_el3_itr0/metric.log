@@ -1,0 +1,10 @@
+Data Path: ./datasets/ETTh1.csv
+Data Split: [8640, 2880, 2880]
+Input Length:168   Output Length:24
+Inverse to original scale: False
+
+MAE:0.3598608374595642
+MSE:0.3022479712963104
+RMSE:0.5349280834197998
+MAPE:7.875025749206543
+MSPE:23801.505859375
